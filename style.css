@@ -26,7 +26,7 @@
 }
 .nav-link {
     color: var(--color-font) !important;
-    padding:0px 20px 0px 20px !important;
+    padding:5px 20px 5px 20px !important;
     transition: opacity 0.25s;
     font-family: "Nunito Sans", inherit !important;
 }
@@ -38,6 +38,7 @@
 }
 .main-content {
     margin-top:800px; /* hero-image */
+    padding:0;
 }
 .hero-image {
     position:absolute;
@@ -64,12 +65,14 @@
 }
 
 
+
 #skills {
     height:600px;
 }
 #skills > div:nth-child(1) {
     background-color: var(--color-bg-2);
     padding: 150px 50px;
+    height:600px;
 
 }
 #skills > div:nth-child(2) {
@@ -77,15 +80,16 @@
 }
 #skills > div:nth-child(2) > img {
     width:100%;
-    height:100%;
+    height:600px;
     object-fit:cover;
+    object-position: right;
 }
+
 
 
 #stats {
     background-color: var(--color-highlight);
     color:white;
-    height:250px;
     padding:66px 3%;
 }
 #stats > div {
@@ -106,29 +110,67 @@
 }
 
 
+
 #preview-images > div {
     padding:0;
+    position:relative;
 }
-#preview-images img {
-    /* object-fit: cover;
-    object-position: center; */
+#preview-images > div > img {
     width:100%;
     height:100%;
+    max-height:350px;
+    object-fit: cover;
 }
-
-/* #preview-images img::after {
-    content: " ";
-    opacity:0;
+#preview-images .overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
     background-color: #000000;
-    display:block;
-    width:100%;
-    height:100%;
-
-    transition: opacity 0.25s;
+    opacity: 0;
+    transition:opacity 0.2s;
 }
-#preview-images img:hover::after {
+#preview-images .overlay > img {
+    margin:auto;
+    display:block;
+    
+    width:48px;
+
+    height:100%;
+    object-fit: contain;
+}
+#preview-images .overlay:hover {
     opacity:0.8;
-} */
+}
+
+
+
+#services img {
+    margin:10px;
+}
+#services .font-title {
+    margin:5px;
+}
+#services p {
+    opacity:0.7;
+}
+
+
+
+#testimonials {
+    background-color: var(--color-highlight);
+    color:white;
+    padding:200px 0px;
+}
+
+
+
+#companies img {
+    display:block;
+    margin:50px auto 50px auto;
+}
+
 
 
 .font-title {
